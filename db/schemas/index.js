@@ -28,10 +28,13 @@ sequelize.authenticate()
     console.log('Error ', err)
 })
 
+const db = {}
+
+
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
-db.superMarkets = require('./supermarket_schemas.js')(sequelize, DataTypes)
+db.superMarket = require('./supermarket.js')(sequelize, DataTypes)
 
 db.sequelize.sync({ force: false })
 .then(() => {

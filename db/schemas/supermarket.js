@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
     const SupermarketInfo = sequelize.define("supermarketInfo", {
-        image: {
+        image: { // url to the image
             type: DataTypes.STRING
         },
         brand: {
@@ -21,8 +21,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         phone: {
             type: DataTypes.STRING
+        },
+        email: {
+            type: DataTypes.TEXT
         }
-    
     })
     return SupermarketInfo
 }
